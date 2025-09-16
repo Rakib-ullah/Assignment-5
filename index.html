@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind css cdn -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Emergency Service Directory</title>
+    <!-- Fort Awesome cdn -->
+    <!-- Font Awesome Free (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 </head>
 
 <body>
@@ -23,13 +28,13 @@
                 <!-- Image / Icon Button-->
                 <button id="cardHeart"
                     class="flex justify-center items-center gap-[16px] bg-[#41ff6b1a] w-[123px] h-[52px] rounded-[50px]">
-                    <span class="h-[12] w-[24] text-[#000000]">0</span><img src="./assets/heart.png"
+                    <span class="h-[12] w-[24] text-[#000000] font-bold">0</span><img src="./assets/heart.png"
                         class="w-[30px] h-[30px]">
                 </button>
                 <!-- coin / Icon -->
                 <button id="cardCoin"
                     class="flex justify-center items-center gap-[16px] bg-[#41ff6b1a] w-[106px] h-[52px] rounded-[50px]">
-                    <span class="h-[32] w-[24] text-[#000000]">100</span><img src="./assets/coin.png"
+                    <span class="h-[32] w-[24] text-[#000000] font-bold">100</span><img src="./assets/coin.png"
                         class="w-[24px] h-[24px]">
                 </button>
                 <!-- click / Btn -->
@@ -52,7 +57,46 @@
         </div>
 
 
-        <!-- js script -->
+        <!-- card section part -->
+        <section class="flex gap-6 p-14">
+            <!-- Left: Emergency Card -->
+            <div
+                class="flex-1 flex flex-col gap-5 rounded-[12px] shadow-[0_2px_3px_0_rgba(0,0,0,0.15)] bg-white px-6 py-4">
+                <!-- card icon -->
+                <div class="flex flex-row justify-between items-center">
+                    <img src="./assets/emergency.png" alt="Emergency Icon"
+                        class=" flex justify-center items-center bg-[#ffe3e2] rounded-[16px] w-20 h-20 p-3">
+                    <i class="fa-solid fa-heart text-[24px]"></i>
+                </div>
+                <div class="flex flex-col items-start gap-4">
+
+                    <h1 class="text-[#111111] text-3xl font-bold">National Emergency Number</h1>
+                    <h2 class="text-[#5c5c5c] text-lg">National Emergency</h2>
+                    <p class="text-[#111111] text-4xl font-bold">999</p>
+                    <button class="bg-[#f2f2f2] rounded-full px-6 py-2 text-[18px]">All</button>
+                </div>
+
+                <!-- Card Buttons part-->
+                <div class="flex gap-5 mt-4">
+                    <button
+                        class="flex justify-center items-center gap-2 rounded-[8px] shadow-[0_2px_3px_0_rgba(0,0,0,0.15)] bg-white h-10 w-44">
+                        <i class="fa-solid fa-copy"></i> Copy
+                    </button>
+                    <button
+                        class="flex justify-center items-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-10 w-44">
+                        <i class="fa-solid fa-phone"></i> Call
+                    </button>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+
+
+        <!-- ................js scrip cannect.....................-->
         <script src="./main.js"></script>
     </body>
 
