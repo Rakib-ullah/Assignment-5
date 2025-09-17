@@ -1,10 +1,8 @@
 //.........Heart Count part.........
-
 var heartBtn = document.getElementById("cardHeart");
 var heartCount = heartBtn.getElementsByTagName("span")[0];
 var hearts = parseInt(heartCount.innerText);
 
-// Loop through each card heart
 var heartIcons = document.getElementsByClassName("fa-heart");
 for (var i = 0; i < heartIcons.length; i++) {
     heartIcons[i].addEventListener("click", function () {
@@ -14,29 +12,24 @@ for (var i = 0; i < heartIcons.length; i++) {
 }
 
 
-//......... Most Importent Part Call Button Related Function............
+
+
+//......... Call Button Related Function ............
 
 var coinBtn = document.getElementById("cardCoin");
 var coinCount = coinBtn.getElementsByTagName("span")[0];
 var coins = parseInt(coinCount.innerText);
 
-// Loop through each card coin
 var callButtons = document.getElementsByClassName("callBtn");
 var historyContainer = document.getElementById("historyContainer");
 
 for (var i = 0; i < callButtons.length; i++) {
-    var btn = callButtons[i].parentElement;
-    btn.addEventListener("click", function () {
-        var card = this.parentNode;
-        while (card && !card.classList.contains("flex-col")) {
-            card = card.parentNode;
-        }
+    callButtons[i].addEventListener("click", function () {
+        var card = this.closest(".card");
         if (!card) return;
 
-        // Service Name
         var serviceName = card.getElementsByTagName("h1")[0].innerText;
-
-        // Number
+        // Number Additing Part
         var number = "";
         var paragraphs = card.getElementsByTagName("p");
         for (var j = 0; j < paragraphs.length; j++) {
@@ -45,16 +38,17 @@ for (var i = 0; i < callButtons.length; i++) {
                 break;
             }
         }
+
+        // Condition For Coin Part
         if (coins < 20) {
             alert("Insufficient coins! You need at least 20 coins to make a call.");
             return;
         }
-
         coins -= 20;
         coinCount.innerText = coins;
-        alert("Emergency.Service.Notify.App says:\nCalling " + serviceName + " at " + number + "...");
+        alert("emargency.service.notify.app says:\nCalling " + serviceName + " at " + number);
 
-        // Add history
+        // Add history Part And Most Difical Part..
         var time = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
         var historyCard = document.createElement("div");
         historyCard.className = "flex justify-between p-4 bg-white border-2 rounded-lg shadow";
@@ -66,11 +60,54 @@ for (var i = 0; i < callButtons.length; i++) {
         historyContainer.insertBefore(historyCard, historyContainer.firstChild);
     });
 }
-// History Container
-var clearBtn = document.getElementById("clearBtn");
 
+//..... Clear Button....
+var clearBtn = document.getElementById("clearBtn");
 clearBtn.addEventListener("click", function () {
     historyContainer.innerHTML = "";
 });
 
 
+
+
+// ....... Copy Button Function Work ...........
+
+var copyButtons = document.getElementsByClassName("copyBtn");
+for (var j = 0; j < copyButtons.length; j++) {
+    copyButtons[j].addEventListener("click", function () {
+        var card = this.closest(".card");
+        // Number copy Part
+        var number = "";
+        var paragraphs = card.getElementsByTagName("p");
+        for (var k = 0; k < paragraphs.length; k++) {
+            if (paragraphs[k].className.indexOf("text-4xl") !== -1) {
+                number = paragraphs[k].innerText;
+                break;
+            }
+        }
+        navigator.clipboard.writeText(number);
+
+        alert("📋 Number copied: " + number);
+    });
+}
+
+// ..........Copy Counter Setup..........
+var copyBtn = document.getElementById("copyBtn");
+var copyCount = document.getElementById("copyCount");
+var totalCopied = 0;
+
+// Card Copy Button .....
+var copyButtons = document.getElementsByClassName("copyBtn");
+
+for (var j = 0; j < copyButtons.length; j++) {
+    copyButtons[j].addEventListener("click", function () {
+        var card = this.closest(".card");
+        var number = card.getElementsByTagName("p")[0].innerText; // 
+
+        navigator.clipboard.writeText(number);
+        totalCopied += 1;
+        copyCount.innerText = totalCopied;
+
+        alert("📋 Number copied: " + number);
+    });
+}
