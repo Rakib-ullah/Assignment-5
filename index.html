@@ -71,7 +71,7 @@
                         <div class="flex justify-center items-center bg-[#ffe3e2] rounded-[16px] w-20 h-20 p-3">
                             <img src="./assets/emergency.png" alt="Emergency Icon" class="w-12 h-12">
                         </div>
-                        <i class="text-2xl cursor-pointer py-7 fa-solid fa-heart"></i>
+                        <i id="heartIcon" class="text-2xl cursor-pointer py-7 fa-solid fa-heart"></i>
                     </div>
                     <h1 class="text-[#111111] text-3xl font-bold">National Emergency Number</h1>
                     <h2 class="text-[#5c5c5c] text-lg">National Emergency</h2>
@@ -83,14 +83,14 @@
                     <!-- Card Buttons -->
                     <div class="flex flex-col gap-3 mt-4 sm:flex-row">
                         <!-- Copy Button -->
-                        <button
+                        <button id="cardCoin"
                             class="flex-1 flex items-center justify-center gap-2 rounded-[8px] shadow bg-white text-black h-12 transition-all active:bg-[#d4d6d5] w-full">
                             <i class="fa-solid fa-copy"></i> Copy
                         </button>
 
                         <!-- Call Button -->
                         <button
-                            class="flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
+                            class="callBtn flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
@@ -116,14 +116,14 @@
                     <!-- Card Buttons -->
                     <div class="flex flex-col gap-3 mt-4 sm:flex-row">
                         <!-- Copy Button -->
-                        <button
+                        <button id="cardCoin"
                             class="flex-1 flex items-center justify-center gap-2 rounded-[8px] shadow bg-white text-black h-12 transition-all active:bg-[#d4d6d5] w-full">
                             <i class="fa-solid fa-copy"></i> Copy
                         </button>
 
                         <!-- Call Button -->
                         <button
-                            class="flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
+                            class="callBtn flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
@@ -156,7 +156,7 @@
 
                         <!-- Call Button -->
                         <button
-                            class="flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
+                            class="callBtn flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
@@ -188,7 +188,7 @@
 
                         <!-- Call Button -->
                         <button
-                            class="flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
+                            class="callBtn flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
@@ -220,7 +220,7 @@
 
                         <!-- Call Button -->
                         <button
-                            class="flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
+                            class="callBtn flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
@@ -252,7 +252,7 @@
 
                         <!-- Call Button -->
                         <button
-                            class="flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
+                            class="callBtn flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
@@ -284,7 +284,7 @@
 
                         <!-- Call Button -->
                         <button
-                            class="flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
+                            class="callBtn flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
@@ -318,7 +318,7 @@
 
                         <!-- Call Button -->
                         <button
-                            class="flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
+                            class="callBtn flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
@@ -352,7 +352,7 @@
 
                         <!-- Call Button -->
                         <button
-                            class="flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
+                            class="callBtn flex-1 flex items-center justify-center gap-2 rounded-[8px] bg-[#00a63e] text-white h-12 transition-all active:bg-[#00000026] w-full">
                             <i class="fa-solid fa-phone"></i> Call
                         </button>
                     </div>
@@ -363,38 +363,26 @@
 
 
             <!-- ..........Right: Call History ...........-->
-            <div class="gap-5 p-4">
 
-                <!-- Header: Call History + Clear Button -->
-                <div class="flex justify-between p-4 mx-auto bg-white rounded-lg shadow">
-                    <div class="flex items-center gap-3">
-                        <i class="text-lg text-gray-600 fa-solid fa-clock"></i>
+            <!-- Header: Call History + Clear Button -->
+            <div class="flex flex-col gap-4 p-4 mx-auto bg-[#ffffff]  shadow">
+                <div class="flex justify-between bg-[#fafafa] gap-4 p-4 mx-auto rounded-8">
+                    <div class="flex items-start gap-2">
+                        <i class="mt-1 text-lg text-gray-600 fa-solid fa-clock"></i>
                         <h1 class="text-[#111111] text-lg font-bold">Call History</h1>
                     </div>
 
                     <!-- Clear Button -->
                     <button id="clearBtn"
-                        class="flex justify-center items-center bg-[#00a63e] w-32 rounded-full text-white text-[16px] h-8 transition-all active:bg-[#00000026] gap-2">
+                        class="flex justify-center items-center bg-[#00a63e] w-32 rounded-full text-white text-[16px] h-8 transition-all active:bg-[#00000026] gap-2 ">
                         <i class="fa-solid fa-phone"></i> Clear
                     </button>
                 </div>
-
-                <!-- History List Container -->
-                <div id="historyContainer" class="flex flex-col gap-3 mt-4">
-                    <!-- Single History Card -->
-                    <!-- Example: -->
-                    <div class="flex justify-between p-4 bg-white border-2 rounded-lg shadow">
-                        <div>
-                            <p class="text-sm font-semibold text-gray-700">John Doe</p>
-                            <p class="text-xs text-gray-500">01700000000</p>
-                        </div>
-                        <p class="text-xs text-gray-400">10:30 AM</p>
-                    </div>
+                <div id="historyContainer" class="flex flex-col bg-[#fafafa] rounder-8 gap-3 border-none">
                 </div>
             </div>
 
         </section>
-
 
         <!-- ................js scrip cannect.....................-->
         <script src="./main.js"></script>
