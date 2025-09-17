@@ -1,4 +1,5 @@
 //.........Heart Count part.........
+
 var heartBtn = document.getElementById("cardHeart");
 var heartCount = heartBtn.getElementsByTagName("span")[0];
 var hearts = parseInt(heartCount.innerText);
@@ -13,8 +14,7 @@ for (var i = 0; i < heartIcons.length; i++) {
 
 
 
-
-//......... Call Button Related Function ............
+//......... Call Button Related Function Part ............
 
 var coinBtn = document.getElementById("cardCoin");
 var coinCount = coinBtn.getElementsByTagName("span")[0];
@@ -29,7 +29,7 @@ for (var i = 0; i < callButtons.length; i++) {
         if (!card) return;
 
         var serviceName = card.getElementsByTagName("h1")[0].innerText;
-        // Number Additing Part
+        // Number Additing 
         var number = "";
         var paragraphs = card.getElementsByTagName("p");
         for (var j = 0; j < paragraphs.length; j++) {
@@ -39,7 +39,7 @@ for (var i = 0; i < callButtons.length; i++) {
             }
         }
 
-        // Condition For Coin Part
+        // Condition For Coin 
         if (coins < 20) {
             alert("Insufficient coins! You need at least 20 coins to make a call.");
             return;
@@ -48,7 +48,8 @@ for (var i = 0; i < callButtons.length; i++) {
         coinCount.innerText = coins;
         alert("emargency.service.notify.app says:\nCalling " + serviceName + " at " + number);
 
-        // Add history Part And Most Difical Part..
+        // .........Add history Part And Most Difical Part..........
+
         var time = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
         var historyCard = document.createElement("div");
         historyCard.className = "flex justify-between p-4 bg-white border-2 rounded-lg shadow";
@@ -70,13 +71,13 @@ clearBtn.addEventListener("click", function () {
 
 
 
-// ....... Copy Button Function Work ...........
+// ....... Copy Button Function Work Part ...........
 
 var copyButtons = document.getElementsByClassName("copyBtn");
 for (var j = 0; j < copyButtons.length; j++) {
     copyButtons[j].addEventListener("click", function () {
         var card = this.closest(".card");
-        // Number copy Part
+        // Number copy....
         var number = "";
         var paragraphs = card.getElementsByTagName("p");
         for (var k = 0; k < paragraphs.length; k++) {
@@ -91,19 +92,20 @@ for (var j = 0; j < copyButtons.length; j++) {
     });
 }
 
-// ..........Copy Counter Setup..........
+
+// ..........Copy Counter Setup Part............
+
 var copyBtn = document.getElementById("copyBtn");
 var copyCount = document.getElementById("copyCount");
 var totalCopied = 0;
 
-// Card Copy Button .....
+// Card Copy Button Part .....
 var copyButtons = document.getElementsByClassName("copyBtn");
 
 for (var j = 0; j < copyButtons.length; j++) {
     copyButtons[j].addEventListener("click", function () {
         var card = this.closest(".card");
-        var number = card.getElementsByTagName("p")[0].innerText; // 
-
+        var number = card.getElementsByTagName("p")[0].innerText;
         navigator.clipboard.writeText(number);
         totalCopied += 1;
         copyCount.innerText = totalCopied;
